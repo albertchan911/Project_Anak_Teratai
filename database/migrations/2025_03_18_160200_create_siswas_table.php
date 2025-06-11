@@ -17,6 +17,9 @@ return new class extends Migration
             $table->date('tanggal_lahir');
             $table->string('kelas');
             $table->string('he_qi'); // Menyimpan wilayah He Qi (sebagai string atau JSON)
+            $table->string('sekolah'); // Menyimpan nama sekolah
+            $table->string('foto_siswa')->nullable(); // Menyimpan path foto siswa
+            $table->date('tanggal_dibantu')->nullable(); // Tanggal siswa dibantu
             $table->timestamps();
         });
     }

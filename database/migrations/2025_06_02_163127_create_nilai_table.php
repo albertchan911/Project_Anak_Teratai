@@ -17,6 +17,7 @@ Schema::create('nilai', function (Blueprint $table) {
     $table->decimal('nilai_rata_rata', 5, 2); // Nilai rata-rata
     $table->enum('semester', ['Semester 1', 'Semester 2']); // Pilihan semester
     $table->text('catatan'); // Catatan untuk siswa
+    $table->integer('kelas'); // Kolom kelas dengan tipe integer
     $table->timestamps();
 });
 

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-Schema::create('nilai', function (Blueprint $table) {
+Schema::create('nilais', function (Blueprint $table) {
     $table->id();
     $table->foreignId('siswa_id')->constrained()->onDelete('cascade'); // Relasi ke siswa
     $table->decimal('nilai_rata_rata', 5, 2); // Nilai rata-rata

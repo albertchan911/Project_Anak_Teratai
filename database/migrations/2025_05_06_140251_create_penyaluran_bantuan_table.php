@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('jenis_bantuan'); // SPP, uang pangkal, dll
             $table->integer('jumlah'); // nominal
             $table->string('keterangan')->nullable(); // misalnya bulan, semester, dll
+            $table->stiring('sekolah');
             $table->date('tanggal');
             $table->string('kwitansi_image')->nullable(); // untuk menyimpan nama file gambar kwitansi
             $table->timestamps();

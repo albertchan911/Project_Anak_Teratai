@@ -19,6 +19,9 @@ Schema::create('nilais', function (Blueprint $table) {
     $table->text('catatan'); // Catatan untuk siswa
     $table->integer('kelas'); // Kolom kelas dengan tipe integer
     $table->timestamps();
+    $table->string('sekolah');
+    $table->string('bulan_realisasi');
+    $table->string('buktipembayaran');
 });
 
     }

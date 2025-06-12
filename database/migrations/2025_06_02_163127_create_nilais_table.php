@@ -28,6 +28,6 @@ Schema::create('nilais', function (Blueprint $table) {
      */
     public function down(): void
     {
-        Schema::dropIfExists('nilai');
+        Schema::dropIfExists('nilais');
     }
 };

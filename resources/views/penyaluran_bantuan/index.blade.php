@@ -121,7 +121,7 @@
                 @if($bantuan->bukti_pembayaran)
                     <a href="{{ asset('storage/public/bukti_pembayaran/' . $bantuan->bukti_pembayaran) }}" download
                     class="block w-20 aspect-square bg-gray-100 rounded shadow-md overflow-hidden mx-auto">
-                        <img src="{{ asset('storage/public/bukti_pembayaran/' . $bantuan->bukti_pembayaran) }}"
+                        <img src="{{ asset('storage/public/public/bukti_pembayaran/' . $bantuan->bukti_pembayaran) }}"
                             alt="Bukti Pembayaran" class="w-full h-full object-cover">
                     </a>
                 @else

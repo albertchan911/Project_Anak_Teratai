@@ -11,18 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-Schema::create('nilais', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('siswa_id')->constrained()->onDelete('cascade'); // Relasi ke siswa
-    $table->decimal('nilai_rata_rata', 5, 2); // Nilai rata-rata
-    $table->enum('semester', ['Semester 1', 'Semester 2']); // Pilihan semester
-    $table->text('catatan'); // Catatan untuk siswa
-    $table->integer('kelas'); // Kolom kelas dengan tipe integer
-    $table->timestamps();
-    $table->string('sekolah');
-    $table->string('bulan_realisasi');
-    $table->string('buktipembayaran');
-});
+        Schema::create('nilais', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('siswa_id')->constrained('siswas')->onDelete('cascade');
+            $table->decimal('nilai_rata_rata', 5, 2);
+            $table->enum('semester', ['Semester 1', 'Semester 2']);
+            $table->text('catatan');
+            $table->timestamps();
+            $table->integer('kelas');
+        });
 
     }
 

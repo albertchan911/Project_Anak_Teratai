@@ -11,16 +11,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('penyaluran_bantuan', function (Blueprint $table) {
+    Schema::create('penyaluran_bantuan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('siswa_id')->constrained()->onDelete('cascade');
-            $table->string('jenis_bantuan'); // SPP, uang pangkal, dll
-            $table->integer('jumlah'); // nominal
-            $table->string('keterangan')->nullable(); // misalnya bulan, semester, dll
-            $table->string('sekolah');
+            $table->foreignId('siswa_id')->constrained('siswas')->onDelete('cascade');
+            $table->longText('jenis_bantuan')->nullable();
+            $table->integer('jumlah');
+            $table->string('keterangan')->nullable();
             $table->date('tanggal');
-            $table->string('kwitansi_image')->nullable(); // untuk menyimpan nama file gambar kwitansi
+            $table->string('kwitansi_image')->nullable();
             $table->timestamps();
+            $table->string('sekolah')->nullable();
+            $table->longText('bulan_realisasi')->nullable();
+            $table->string('bukti_pembayaran')->nullable();
         });
     }
     

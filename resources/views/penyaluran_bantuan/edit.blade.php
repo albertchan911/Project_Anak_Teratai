@@ -31,7 +31,7 @@
         <div class="flex items-center space-x-4 mb-2" id="jenis-bantuan-{{ $index }}" style="display: flex; align-items: center;">
             <select name="jenis_bantuan[]" class="w-1/5 border rounded-md px-3 py-2" required>
                 <option value="{{ $jenis }}" selected>{{ $jenis }}</option>
-                @foreach(['SPP', 'Uang Pangkal', 'Uang Kegiatan', 'Uang Seragam', 'Semesteran'] as $jenisOption)
+                @foreach(['SPP', 'Uang Pangkal', 'Uang Seragam', 'Uang Buku', 'Uang Ujian', 'Uang Buku', 'Semesteran'] as $jenisOption)
                     <option value="{{ $jenisOption }}" 
                         {{ in_array($jenisOption, json_decode($bantuan->jenis_bantuan)) ? 'disabled' : '' }}>
                         {{ $jenisOption }}
@@ -49,7 +49,7 @@
 
 <script>
     const jenisSelected = @json(json_decode($bantuan->jenis_bantuan)); // Ambil jenis bantuan yang sudah dipilih
-    const jenisOptions = ['SPP', 'Uang Pangkal', 'Uang Kegiatan', 'Uang Seragam', 'Semesteran'];
+    const jenisOptions = ['SPP', 'Uang Pangkal', 'Uang Seragam', 'Uang Buku', 'Uang Ujian','Semesteran', 'Uang Buku'];
     
     let jenisCount = jenisSelected.length;
 

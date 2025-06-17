@@ -34,10 +34,10 @@
                         <option value="">-- Pilih Jenis Bantuan --</option>
                         <option value="SPP">SPP</option>
                         <option value="Uang Pangkal">Uang Pangkal</option>
-                        <option value="Uang Kegiatan">Uang Kegiatan</option>
                         <option value="Uang Seragam">Uang Seragam</option>
-                        <option value="Semesteran">Uang Buku</option>
-                        <option value="Semesteran">Uang Ujian</option>
+                        <option value="Uang Buku">Uang Buku</option>
+                        <option value="Uang Ujian">Uang Ujian</option>
+                        <option value="Uang Buku">Uang Buku</option>
                         <option value="Semesteran">Semesteran</option>
                     </select>
                 </div>
@@ -63,9 +63,12 @@
                 <option value="">-- Pilih Jenis Bantuan --</option>
                 <option value="SPP">SPP</option>
                 <option value="Uang Pangkal">Uang Pangkal</option>
-                <option value="Uang Kegiatan">Uang Kegiatan</option>
                 <option value="Uang Seragam">Uang Seragam</option>
+                <option value="Uang Buku">Uang Buku</option>
+                <option value="Uang Ujian">Uang Ujian</option>
+                <option value="Uang Buku">Uang Buku</option>
                 <option value="Semesteran">Semesteran</option>
+
             </select>
         `;
 

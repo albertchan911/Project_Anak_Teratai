@@ -20,10 +20,10 @@ class Siswa extends Model
         return $this->hasMany(CatatanAnak::class, 'siswa_id');
     }
 
-public function nilais()
-{
-    return $this->hasMany(Nilai::class);
-}
+    public function nilais()
+    {
+        return $this->hasMany(Nilai::class);
+    }
 
     // Relasi: Satu siswa bisa memiliki banyak penyaluran bantuan
     public function penyaluranBantuan()

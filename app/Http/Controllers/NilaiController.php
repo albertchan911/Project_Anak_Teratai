@@ -8,11 +8,13 @@ use Illuminate\Http\Request;
 
 class NilaiController extends Controller
 {
-    public function create($siswaId)
-    {
-        $siswa = Siswa::findOrFail($siswaId);
-        return view('nilai.create', compact('siswa'));
-    }
+public function create($siswaId)
+{
+    $siswa = Siswa::findOrFail($siswaId);
+    $catatanSebelumnya = $siswa->nilais()->orderByDesc('created_at')->get();
+
+    return view('nilai.create', compact('siswa', 'catatanSebelumnya'));
+}
 
 public function store(Request $request, $siswaId)
 {

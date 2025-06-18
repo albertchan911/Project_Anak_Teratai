@@ -42,9 +42,6 @@
         </div>
         @endforeach
     </div>
-    <button type="button" id="add-jenis-bantuan-button" class="bg-blue-600 text-white px-4 py-2 rounded mt-2" onclick="addJenisBantuan()">
-        Tambah Jenis Bantuan
-    </button>
 </div>
 
 <script>

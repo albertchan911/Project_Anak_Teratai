@@ -32,45 +32,17 @@
                         <option value="">-- Pilih Jenis Bantuan --</option>
                         <option value="SPP">SPP</option>
                         <option value="Uang Pangkal">Uang Pangkal</option>
-                        <option value="Uang Kegiatan">Uang Kegiatan</option>
                         <option value="Uang Seragam">Uang Seragam</option>
-                        <option value="Semesteran">Uang Buku</option>
-                        <option value="Semesteran">Uang Ujian</option>
+                        <option value="Uang Buku">Uang Buku</option>
+                        <option value="Uang Ujian">Uang Ujian</option>
+                        <option value="Uang Buku">Uang Buku</option>
                         <option value="Semesteran">Semesteran</option>
                     </select>
                 </div>
             </div>
-            <button type="button" id="add-jenis-bantuan-button" class="bg-blue-600 text-white px-4 py-2 rounded mt-2">
-                Tambah Jenis Bantuan
-            </button>
         </div>
 
-        <script>
-        // Tambah Jenis Bantuan
-        document.getElementById('add-jenis-bantuan-button').addEventListener('click', function() {
-        // Ambil container untuk input jenis bantuan
-        const jenisBantuanContainer = document.getElementById('jenis-bantuan-container');
 
-        // Buat elemen input jenis bantuan baru
-        const newJenisBantuanInput = document.createElement('div');
-        newJenisBantuanInput.classList.add('flex', 'items-center', 'space-x-4', 'mb-2');
-
-        // Buat dropdown jenis bantuan baru
-        newJenisBantuanInput.innerHTML = `
-            <select name="jenis_bantuan[]" class="w-full border rounded-md px-3 py-2" required>
-                <option value="">-- Pilih Jenis Bantuan --</option>
-                <option value="SPP">SPP</option>
-                <option value="Uang Pangkal">Uang Pangkal</option>
-                <option value="Uang Kegiatan">Uang Kegiatan</option>
-                <option value="Uang Seragam">Uang Seragam</option>
-                <option value="Semesteran">Semesteran</option>
-            </select>
-        `;
-
-        // Masukkan elemen input jenis bantuan baru ke dalam container
-        jenisBantuanContainer.appendChild(newJenisBantuanInput);
-    });
-        </script>
 
         <!-- Jumlah -->
         <div class="mb-4">

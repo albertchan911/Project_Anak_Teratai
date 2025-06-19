@@ -15,7 +15,7 @@
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
                         onchange="resetFilters()">
                     <option value="">Pilih Jenis Bantuan</option>
-                    <?php $__currentLoopData = ['SPP', 'Uang Pangkal', 'Uang Kegiatan', 'Uang Seragam', 'Semesteran']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jenisBantuanOption): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <?php $__currentLoopData = ['SPP', 'Uang Pangkal', 'Uang Seragam', 'Uang Buku', 'Uang Ujian', 'Uang Buku', 'Semesteran']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jenisBantuanOption): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <option value="<?php echo e($jenisBantuanOption); ?>"
                             <?php if(in_array($jenisBantuanOption, old('jenis_bantuan', (array) request('jenis_bantuan')))): ?> selected <?php endif; ?>>
                             <?php echo e($jenisBantuanOption); ?>

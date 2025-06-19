@@ -10,6 +10,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Middleware\CheckHeQiAccess;
 use App\Http\Controllers\PenilaianCatatanController;
 use App\Http\Controllers\NilaiController;
+use App\Exports\SiswaExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 Route::post('/import-siswa', [SiswaController::class, 'import'])->name('siswa.import');
 
@@ -78,6 +80,11 @@ Route::put('/penyaluran-bantuan/{id}', [PenyaluranBantuanController::class, 'upd
 
 Route::get('/siswa/{siswa}/nilai/create', [NilaiController::class, 'create'])->name('nilai.create');
 Route::post('/siswa/{siswa}/nilai', [NilaiController::class, 'store'])->name('nilai.store');
+
+Route::get('/dashboard/export', [DashboardController::class, 'export'])->name('dashboard.export');  // Route untuk ekspor
+Route::get('penyaluran-bantuan/report', [PenyaluranBantuanController::class, 'report'])->name('penyaluran-bantuan.report');
+Route::get('penyaluran-bantuan/report/export', [PenyaluranBantuanController::class, 'exportReport'])->name('penyaluran-bantuan.exportReport');
+
 
 
 });

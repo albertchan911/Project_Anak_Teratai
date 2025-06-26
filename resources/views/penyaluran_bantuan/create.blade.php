@@ -37,7 +37,6 @@
                         <option value="Uang Seragam">Uang Seragam</option>
                         <option value="Uang Buku">Uang Buku</option>
                         <option value="Uang Ujian">Uang Ujian</option>
-                        <option value="Uang Buku">Uang Buku</option>
                         <option value="Semesteran">Semesteran</option>
                     </select>
                 </div>

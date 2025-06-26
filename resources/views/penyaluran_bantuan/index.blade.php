@@ -17,7 +17,7 @@
                         class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300"
                         onchange="resetFilters()">
                     <option value="">Pilih Jenis Bantuan</option>
-                    @foreach(['SPP', 'Uang Pangkal', 'Uang Seragam', 'Uang Buku', 'Uang Ujian', 'Uang Buku', 'Semesteran'] as $jenisBantuanOption)
+                    @foreach(['SPP', 'Uang Pangkal', 'Uang Seragam', 'Uang Buku', 'Uang Ujian', 'Semesteran'] as $jenisBantuanOption)
                         <option value="{{ $jenisBantuanOption }}"
                             @if(in_array($jenisBantuanOption, old('jenis_bantuan', (array) request('jenis_bantuan')))) selected @endif>
                             {{ $jenisBantuanOption }}

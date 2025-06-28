@@ -108,6 +108,7 @@ class PenyaluranBantuanController extends Controller
             'keterangan' => 'nullable|string',
             'tanggal' => 'required|date',
             'sekolah' => 'required|string|max:255',
+            'kelas' => 'required|integer|min:1|max:12',
             'bulan_realisasi' => 'required|array',
             'bulan_realisasi.*' => 'required|string',
             'bukti_pembayaran' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',  // Validasi untuk bukti pembayaran
@@ -144,6 +145,7 @@ class PenyaluranBantuanController extends Controller
             'keterangan' => $validatedData['keterangan'],
             'tanggal' => $validatedData['tanggal'],
             'sekolah' => $validatedData['sekolah'],
+            'kelas' => $validatedData['kelas'], // Menyimpan kelas
             'bulan_realisasi' => json_encode($bulanRealisasi),
         ]);
 
@@ -195,6 +197,7 @@ class PenyaluranBantuanController extends Controller
             'jumlah' => $request->input('jumlah'),
             'tanggal' => $request->input('tanggal'),
             'sekolah' => $request->input('sekolah'),
+            'kelas' => $request->input('kelas'), // Simpan kelas
             'keterangan' => $request->input('keterangan'),
         ]);
 
@@ -326,6 +329,7 @@ public function exportReport(Request $request)
             'No' => $index + 1,
             'Nama Siswa' => $item->siswa->nama,
             'Sekolah' => $item->sekolah,
+            'Kelas' => $item->kelas,
             'Jenis Bantuan' => implode(', ', json_decode($item->jenis_bantuan)),
             'Jumlah' => $item->jumlah,
             'Tanggal' => Carbon::parse($item->tanggal)->format('d F Y'),

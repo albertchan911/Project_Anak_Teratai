@@ -25,6 +25,17 @@
             <input type="text" name="sekolah" id="sekolah" required class="w-full border rounded-md px-3 py-2">
         </div>
 
+        <!-- Kelas -->
+        <div class="mb-4">
+            <label for="kelas" class="block text-sm font-medium text-gray-700 mb-1">Kelas</label>
+            <input type="number" name="kelas" id="kelas"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"
+                value="{{ old('kelas') }}" min="1" max="12" required>
+            @error('kelas')
+                <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
+            @enderror
+        </div>
+
         <!-- Jenis Bantuan -->
         <div class="mb-4">
             <label for="jenis_bantuan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Bantuan</label>
@@ -66,6 +77,7 @@
                     <option value="{{ $bulan }}">{{ $bulan }}</option>
                 @endforeach
             </select>
+            <button type="button" class="bg-red-600 text-white px-4 py-2 rounded" onclick="removeBulan(this)">Hapus</button>
         </div>
     </div>
     <button type="button" id="add-bulan-button" class="bg-blue-600 text-white px-4 py-2 rounded mt-2">
@@ -90,12 +102,20 @@
                     <option value="{{ $bulan }}">{{ $bulan }}</option>
                 @endforeach
             </select>
+            <button type="button" class="bg-red-600 text-white px-4 py-2 rounded" onclick="removeBulan(this)">Hapus</button>
         `;
 
         // Masukkan elemen input bulan baru ke dalam container
         bulanRealisasiContainer.appendChild(newBulanInput);
     });
+
+    // Fungsi untuk menghapus dropdown bulan
+    function removeBulan(button) {
+        const bulanRealisasiContainer = document.getElementById('bulan-realisasi-container');
+        bulanRealisasiContainer.removeChild(button.parentNode);
+    }
 </script>
+
 
 
 

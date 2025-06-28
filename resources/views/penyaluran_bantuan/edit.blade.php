@@ -23,6 +23,14 @@
         <input type="text" name="sekolah" id="sekolah" value="{{ $bantuan->sekolah }}" required class="w-full border rounded-md px-3 py-2">
     </div>
 
+    <!-- Kelas -->
+    <div class="mb-4">
+        <label for="kelas" class="block text-sm font-medium text-gray-700 mb-1">Kelas</label>
+        <input type="number" name="kelas" id="kelas"
+            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"
+            value="{{ $bantuan->kelas }}" min="1" max="12" required>
+    </div>
+
 <!-- Jenis Bantuan -->
 <div class="mb-4">
     <label for="jenis_bantuan" class="block text-sm font-medium text-gray-700 mb-1">Jenis Bantuan</label>
@@ -164,7 +172,7 @@
     <!-- Input Keterangan -->
     <div class="mb-4">
         <label for="keterangan" class="block text-sm font-medium text-gray-700 mb-1">Keterangan</label>
-        <input type="textbox" name="keterangan" id="keterangan" value="{{ $bantuan->keterangan }}" required class="w-full border rounded-md px-3 py-2">
+        <input type="textbox" name="keterangan" id="keterangan" value="{{ $bantuan->keterangan }}" class="w-full border rounded-md px-3 py-2">
     </div>
 
     <!-- Bukti Pembayaran -->

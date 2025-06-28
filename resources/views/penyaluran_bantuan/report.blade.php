@@ -56,6 +56,7 @@
                     <th class="px-6 py-4 text-left">No</th>
                     <th class="px-6 py-4 text-left">Nama Siswa</th>
                     <th class="px-6 py-4 text-left">Sekolah</th>
+                    <th class="px-6 py-4 text-left">Kelas</th>
                     <th class="px-6 py-4 text-left">Jenis Bantuan</th>
                     <th class="px-6 py-4 text-left">Jumlah</th>
                     <th class="px-6 py-4 text-left">Tanggal</th>
@@ -68,6 +69,7 @@
                         <td class="px-6 py-4">{{ $index + 1 }}</td>
                         <td class="px-6 py-4">{{ $bantuan->siswa->nama }}</td>
                         <td class="px-6 py-4">{{ $bantuan->sekolah }}</td>
+                        <td class="px-6 py-4">{{ $bantuan->kelas }}</td>
                         <td class="px-6 py-4">{{ implode(', ', json_decode($bantuan->jenis_bantuan)) }}</td>
                         <td class="px-6 py-4">{{ $bantuan->jumlah }}</td>
                         <td class="px-6 py-4">{{ \Carbon\Carbon::parse($bantuan->tanggal)->format('d F Y') }}</td>

@@ -54,6 +54,7 @@
         <thead>
             <tr class="bg-gray-100">
                 <th class="py-3 px-4 text-left border-b text-sm font-medium w-[60px]">No</th>
+                <th class="py-3 px-4 text-left border-b text-sm font-medium w-[180px]">Kelas</th>
                 <th class="py-3 px-4 text-left border-b text-sm font-medium w-[180px]">Jenis Bantuan</th>
                 <th class="py-3 px-4 text-left border-b text-sm font-medium w-[150px]">Jumlah</th>
                 <th class="py-3 px-4 text-left border-b text-sm font-medium w-[200px]">Tanggal</th>
@@ -66,6 +67,7 @@
             @foreach($penyaluranBantuan as $index => $bantuan)
                 <tr class="text-sm">
                     <td class="py-3 px-4 border-b">{{ $index + 1 }}</td>
+                    <td class="py-3 px-4 border-b">{{ $bantuan->kelas }}</td>
                     <td class="py-3 px-4 border-b">
                         @if($bantuan->jenis_bantuan)
                             @foreach (json_decode($bantuan->jenis_bantuan) as $jenis)

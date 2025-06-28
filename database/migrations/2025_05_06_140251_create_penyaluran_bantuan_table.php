@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('sekolah')->nullable();
             $table->longText('bulan_realisasi')->nullable();
             $table->string('bukti_pembayaran')->nullable();
+            $table->integer('kelas')->nullable(); // Menambahkan kolom kelas
         });
     }
     

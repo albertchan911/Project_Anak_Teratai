@@ -19,6 +19,7 @@ class PenyaluranBantuan extends Model
         'tanggal',
         'kwitansi_image',
         'sekolah',
+        'kelas',
         'bulan_realisasi',
         'bukti_pembayaran',
     ];

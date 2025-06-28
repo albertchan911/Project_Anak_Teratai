@@ -75,6 +75,7 @@
                     <th class="px-4 py-3 w-[5%] text-center">No</th>
                     <th class="px-4 py-3 w-[15%] text-left">Nama Siswa</th>
                     <th class="px-4 py-3 w-[15%] text-left">Sekolah</th>
+                    <th class="px-4 py-3 w-[15%] text-left">Kelas</th>
                     <th class="px-4 py-3 w-[15%] text-left">Jenis Bantuan</th>
                     <th class="px-4 py-3 w-[10%] text-right">Jumlah</th>
                     <th class="px-4 py-3 w-[15%] text-center">Tanggal</th>
@@ -95,6 +96,9 @@
 
             <td class="px-4 py-3 text-base text-gray-700 ">
                 {{ $bantuan->sekolah }}
+            </td>
+            <td class="px-4 py-3 text-base text-gray-700">
+                {{ $bantuan->kelas }}
             </td>
             <td class="px-4 py-3 text-base text-gray-700">
                 @foreach (json_decode($bantuan->jenis_bantuan) as $jenis)

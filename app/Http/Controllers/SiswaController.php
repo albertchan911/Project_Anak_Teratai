@@ -176,9 +176,10 @@ foreach ($rows as $row) {
     $row['kelas'] = trim($row['kelas']);
     $row['sekolah'] = trim($row['sekolah']);
     $row['he_qi'] = trim($row['he_qi']);
+    $row['tanggal_dibantu'] = trim($row['tanggal_dibantu']);
     
     // Memeriksa apakah semua kolom ada
-    if (isset($row['nama'], $row['tanggal_lahir'], $row['kelas'], $row['he_qi'], $row['sekolah'])) {
+    if (isset($row['nama'], $row['tanggal_lahir'], $row['kelas'], $row['he_qi'], $row['sekolah'], $row['tanggal_dibantu'])) {
         try {
             $siswa = \App\Models\Siswa::create([
                 'nama' => $row['nama'],
@@ -186,6 +187,7 @@ foreach ($rows as $row) {
                 'kelas' => $row['kelas'],
                 'he_qi' => $row['he_qi'],
                 'sekolah' => $row['sekolah'],
+                'tanggal_dibantu' => $row['tanggal_dibantu'],
             ]);
             \Log::info('Data siswa berhasil disimpan: ' . $siswa->nama);
         } catch (\Exception $e) {
